@@ -55,11 +55,11 @@ def hashing(filename):
           
     return bits
 
-#os.chdir('E:\Programming\Projects\Web DEv\iosd\images')
-#for index, filename in enumerate(os.listdir('.')):
- #  if(os.path.isfile(filename)):
-  #    filehash=hashing(filename)
-   #   insert(filename,filehash)
+os.chdir('E:\Programming\Projects\Web DEv\iosd\images')
+for index, filename in enumerate(os.listdir('.')):
+  if(os.path.isfile(filename)):
+      filehash=hashing(filename)
+      insert(filename,filehash)
 
 
 count=0;
