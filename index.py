@@ -46,7 +46,7 @@ def hashing(filename):
                 bits=bits+'0'
 
              
-    print(bits)
+    #print(bits)
 
     parts = [bits[i:i+4] for i in range(0, len(bits), 4)]
     x=""
