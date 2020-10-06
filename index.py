@@ -5,21 +5,21 @@ import psycopg2
 
 
 def create_table():
-    conn = psycopg2.connect("dbname = 'database1' user = 'postgres' password = 'blehbogo' host = 'localhost' port = '5432'")
+    conn = psycopg2.connect("dbname = 'database1' user = 'postgres' password = '' host = 'localhost' port = '5432'")
     cur = conn.cursor()
     cur.execute("CREATE TABLE  IF NOT EXISTS dogimages(image TEXT, hash TEXT)")
     conn.commit()
     conn. close()
 
 def insert(image,hash):
-    conn = psycopg2.connect("dbname = 'database1' user = 'postgres' password = 'blehbogo' host = 'localhost' port = '5432'")
+    conn = psycopg2.connect("dbname = 'database1' user = 'postgres' password = '' host = 'localhost' port = '5432'")
     cur = conn.cursor()
     cur.execute("INSERT INTO dogimages VALUES (%s, %s)", (image, hash))
     conn.commit()
     conn. close()
 
 def view():
-    conn= psycopg2.connect("dbname = 'database1' user = 'postgres' password = 'blehbogo' host = 'localhost' port = '5432'")
+    conn= psycopg2.connect("dbname = 'database1' user = 'postgres' password = '' host = 'localhost' port = '5432'")
     cur = conn. cursor()
     cur.execute("SELECT DISTINCT dogimages.hash FROM  dogimages")
     rows = cur.fetchall()
